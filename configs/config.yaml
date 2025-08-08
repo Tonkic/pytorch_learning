@@ -1,0 +1,21 @@
+model:
+  name: "default_model"
+  input_size: 784
+  hidden_size: 512
+  num_classes: 10
+
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  epochs: 10
+  optimizer: "adam"
+  loss: "cross_entropy"
+
+data:
+  train_path: "data/processed/train"
+  val_path: "data/processed/val"
+  test_path: "data/processed/test"
+
+logging:
+  save_dir: "models/checkpoints"
+  log_interval: 100
