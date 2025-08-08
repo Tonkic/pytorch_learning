@@ -56,8 +56,3 @@ python src/train.py --config configs/config.yaml
 python src/evaluate.py --model-path models/checkpoints/latest.pth
 ```
 
-## 注意事项
-
-- 请确保已安装CUDA（如果要使用GPU）
-- 建议使用Python 3.8或更高版本
-- 定期备份模型检查点
