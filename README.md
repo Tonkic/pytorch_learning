@@ -31,7 +31,7 @@ pytorch_learning/
 
 1. 创建虚拟环境（推荐使用conda）：
 ```bash
-conda create -n pytorch_env python=3.8
+conda create -n pytorch_env python=3.11
 conda activate pytorch_env
 ```
 
