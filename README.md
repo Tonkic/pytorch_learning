@@ -1,6 +1,6 @@
 # PyTorch学习项目
 
-这是一个基于PyTorch的深度学习项目模板。
+这是一个个人PyTorch的深度学习项目，已复现Deepseek-moe，Transformer
 
 ## 项目结构
 
@@ -27,32 +27,42 @@ pytorch_learning/
 └── README.md          # 项目说明
 ```
 
+
 ## 环境配置
 
 1. 创建虚拟环境（推荐使用conda）：
+
 ```bash
 conda create -n pytorch_env python=3.11
 conda activate pytorch_env
 ```
 
 2. 安装依赖：
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ## 使用说明
 
-1. 准备数据：
-   - 将数据集放入 `data/raw` 目录
-   - 运行数据预处理脚本
+1. 数据自动生成，无需手动准备。
+   - 训练和测试数据由 `src/data/transformer_data.py` 自动生成。
 
-2. 训练模型：
+2. 训练 Transformer 模型：
+
 ```bash
-python src/train.py --config configs/config.yaml
+python -m src.train_transformer
 ```
 
-3. 评估模型：
+3. 训练通用模型：
+
 ```bash
-python src/evaluate.py --model-path models/checkpoints/latest.pth
+python -m src.train
+```
+
+4. 评估模型：
+
+```bash
+python -m src.evaluate --model-path models/checkpoints/latest.pth
 ```
 
